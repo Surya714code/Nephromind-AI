@@ -1,0 +1,73 @@
+{
+  "feature_names": [
+    "Age",
+    "BMI",
+    "Systolic_BP",
+    "Diastolic_BP",
+    "Heart_Rate",
+    "SpO2",
+    "HbA1c",
+    "Gender_encoded"
+  ],
+  "n_features": 8,
+  "numeric_features": [
+    "Age",
+    "BMI",
+    "Systolic_BP",
+    "Diastolic_BP",
+    "Heart_Rate",
+    "SpO2",
+    "HbA1c"
+  ],
+  "categorical_encoded": {
+    "Gender_encoded": {
+      "Male": 1,
+      "Female": 0
+    }
+  },
+  "scaler_type": "StandardScaler",
+  "training_medians": {
+    "Age": 49.0,
+    "BMI": 28.700000762939453,
+    "Systolic_BP": 128.0,
+    "Diastolic_BP": 83.0,
+    "Heart_Rate": 78.0,
+    "SpO2": 97.0,
+    "HbA1c": 6.5,
+    "Gender_encoded": 0.0
+  },
+  "random_seed": 42,
+  "split": {
+    "train": 7980,
+    "val": 1710,
+    "test": 1711
+  },
+  "target": "Kidney_Disease",
+  "positive_class": "Yes",
+  "excluded_features": [
+    "Creatinine_mg_dL",
+    "eGFR",
+    "UACR_mg_g",
+    "Diabetes",
+    "Diabetes_Pedigree",
+    "Diabetes_Duration_Years",
+    "Daily_Steps",
+    "Sleep_Duration_hr",
+    "Activity_Minutes",
+    "Resting_Heart_Rate",
+    "HRV_ms"
+  ],
+  "exclusion_reason": {
+    "Creatinine_mg_dL": "clinical kidney marker \u2014 target leakage risk",
+    "eGFR": "clinical kidney marker \u2014 target leakage risk",
+    "UACR_mg_g": "clinical kidney marker \u2014 target leakage risk",
+    "Diabetes": "deterministic from HbA1c",
+    "Diabetes_Pedigree": "synthetic/non-clinical",
+    "Diabetes_Duration_Years": "unreliable synthetic field",
+    "Daily_Steps": "wearable \u2014 not available from Renal Sentinel hardware",
+    "Sleep_Duration_hr": "wearable \u2014 not available from Renal Sentinel hardware",
+    "Activity_Minutes": "wearable \u2014 not available from Renal Sentinel hardware",
+    "Resting_Heart_Rate": "wearable \u2014 not available from Renal Sentinel hardware",
+    "HRV_ms": "wearable \u2014 not available from Renal Sentinel hardware"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "locked_threshold": 0.5599999999999999,
+  "optimized_on": "validation_Youden_J",
+  "val_youden_j_at_threshold": 0.448068
+}

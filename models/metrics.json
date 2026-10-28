@@ -1,0 +1,97 @@
+{
+  "model": "NephroMind DNN (PyTorch MLP)",
+  "model_version": "nephromind_dnn_v1",
+  "feature_vector": [
+    "Age",
+    "BMI",
+    "Systolic_BP",
+    "Diastolic_BP",
+    "Heart_Rate",
+    "SpO2",
+    "HbA1c",
+    "Gender_encoded"
+  ],
+  "n_features": 8,
+  "locked_threshold": 0.5599999999999999,
+  "threshold_optimized_on": "validation_F1",
+  "dnn_val_metrics_default_threshold": {
+    "threshold": 0.5,
+    "accuracy": 0.687719,
+    "precision": 0.926074,
+    "recall": 0.668349,
+    "f1": 0.776382,
+    "roc_auc": 0.764657,
+    "pr_auc": 0.925614,
+    "sensitivity": 0.668349,
+    "specificity": 0.770898,
+    "brier_score": 0.192414,
+    "confusion_matrix": {
+      "tn": 249,
+      "fp": 74,
+      "fn": 460,
+      "tp": 927
+    }
+  },
+  "dnn_val_metrics_tuned_threshold": {
+    "threshold": 0.56,
+    "accuracy": 0.673684,
+    "precision": 0.934031,
+    "recall": 0.643115,
+    "f1": 0.761742,
+    "roc_auc": 0.764657,
+    "pr_auc": 0.925614,
+    "sensitivity": 0.643115,
+    "specificity": 0.804954,
+    "brier_score": 0.192414,
+    "confusion_matrix": {
+      "tn": 260,
+      "fp": 63,
+      "fn": 495,
+      "tp": 892
+    }
+  },
+  "dnn_test_metrics": {
+    "threshold": 0.56,
+    "accuracy": 0.661017,
+    "precision": 0.930704,
+    "recall": 0.628963,
+    "f1": 0.750645,
+    "roc_auc": 0.74911,
+    "pr_auc": 0.922809,
+    "sensitivity": 0.628963,
+    "specificity": 0.798762,
+    "brier_score": 0.199927,
+    "confusion_matrix": {
+      "tn": 258,
+      "fp": 65,
+      "fn": 515,
+      "tp": 873
+    }
+  },
+  "baseline_gb_test_metrics": {
+    "threshold": 0.36,
+    "accuracy": 0.810053,
+    "precision": 0.81173,
+    "recall": 0.997118,
+    "f1": 0.894924,
+    "roc_auc": 0.76181,
+    "pr_auc": 0.921389,
+    "sensitivity": 0.997118,
+    "specificity": 0.006192,
+    "brier_score": 0.131982,
+    "confusion_matrix": {
+      "tn": 2,
+      "fp": 321,
+      "fn": 4,
+      "tp": 1384
+    },
+    "model": "Gradient Boosting (Tuned) \u2014 Baseline"
+  },
+  "class_distribution": {
+    "val_positive": 1387,
+    "val_total": 1710,
+    "test_positive": 1388,
+    "test_total": 1711
+  },
+  "disclaimer": "PROTOTYPE ONLY. This model calculates a risk score from physiological biomarkers. It is NOT a clinical diagnostic tool and has NOT been clinically validated."
+}

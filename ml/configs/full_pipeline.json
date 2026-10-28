@@ -1,0 +1,33 @@
+{
+  "run_name": "nephromind_full_pipeline_v1",
+  "model_version": "v1.0.0",
+  "random_seed": 42,
+  "raw_dataset_path": "E:/dataset nephro.csv",
+  "target_column": "Kidney_Disease",
+  "positive_class": "Yes",
+  "valid_patient_id_pattern": "^P[0-9]{5}$",
+  "split": {"train": 0.70, "validation": 0.15, "test": 0.15},
+  "numeric_features": [
+    "Age", "BMI", "Systolic_BP", "Diastolic_BP", "Heart_Rate", "SpO2",
+    "Daily_Steps", "Sleep_Duration_hr", "Activity_Minutes",
+    "Resting_Heart_Rate", "HRV_ms", "HbA1c"
+  ],
+  "categorical_features": ["Gender"],
+  "permanently_excluded_features": [
+    "Patient_ID", "Diabetes_Pedigree", "Diabetes", "Diabetes_Duration_Years",
+    "eGFR", "UACR_mg_g", "Creatinine_mg_dL"
+  ],
+  "documented_invalid_bp_patient_ids": [
+    "P01227", "P02527", "P02943", "P03014", "P03987", "P06324", "P08836", "P10495"
+  ],
+  "artifact_dir": "ml/artifacts",
+  "reports_dir": "ml/reports",
+  "figures_dir": "ml/reports/figures",
+  "calibration_method": "isotonic",
+  "default_threshold": 0.5,
+  "hyperparameter_tuning": {
+    "n_iter": 30,
+    "cv": 5,
+    "scoring": "roc_auc"
+  }
+}
